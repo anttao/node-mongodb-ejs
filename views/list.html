@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+	<style type="text/css">
+	table { border:1px solid green;}
+	table thead tr th{ border:1px solid green;}
+	table tbody tr td{ border:1px solid green;}
+	</style>
+	
+  </head>
+  <body>
+	<p>
+		<a href="article.html">增加文章</a>
+		
+	</p>
+    <h1>文章列表</h1>
+    
+	
+	<table>
+		<thead>
+			<tr>
+				<th>id</th>
+				<th>文章序列号</th>
+				<th>文章标题</th>
+				<th>文章内容</th>
+				<th>文章创建时间</th>
+				<th>操作</th>
+			</tr>
+		</thead>
+		<tbody>
+			
+			<!-- <% articles.forEach(function( a ){ %>
+			<tr>
+				<td><%= a._id %></td>
+				<td><%= a.uid %></td>
+				<td><%= a.title %></td>
+				<td><%= a.content %></td>
+				<td><%= a.createTime %></td>
+				<td>
+					<a href="delArticle.html?id=<%=a._id%>">删除</a> 
+					|
+					<a href="modifyArticle.html?id=<%=a._id%>">更新</a>
+				</td>
+			</tr>
+			<% }); %> -->
+			
+		</tbody>
+	</table>
+  </body>
+</html>

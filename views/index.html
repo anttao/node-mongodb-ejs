@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+	<style type="text/css">
+	table { border:1px solid green;}
+	table thead tr th{ border:1px solid green;}
+	table tbody tr td{ border:1px solid green;}
+	</style>
+	
+  </head>
+  <body>
+	<p>
+		<a href="add.html">增加</a>
+		
+	</p>
+    <h1>DEMO ListS</h1>
+    
+	
+	<table>
+		<thead>
+			<tr>
+				<th>id</th>
+				<th>uid</th>
+				<th>title</th>
+				<th>content</th>
+				<th>createTime</th>
+				<th>操作</th>
+			</tr>
+		</thead>
+		<tbody>
+			
+			<% demos.forEach(function( a ){ %>
+			<tr>
+				<td><%= a._id %></td>
+				<td><%= a.uid %></td>
+				<td><%= a.title %></td>
+				<td><%= a.content %></td>
+				<td><%= a.createTime %></td>
+				<td><a href="del.html?id=<%=a._id%>">Delete</a> | <a href="modify.html?id=<%=a._id%>">Update</a></td>
+			</tr>
+			<% }); %>
+		</tbody>
+	</table>
+  </body>
+</html>
